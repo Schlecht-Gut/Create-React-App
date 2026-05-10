@@ -1,8 +1,8 @@
 pipeline {
-    agent any
-
-    tools {
-        nodejs "node20"
+    agent {
+        docker {
+            image 'node:20-alpine' // Uses a Node container as the environment
+        }
     }
 
 
