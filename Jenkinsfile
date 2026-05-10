@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs "node20"
+    }
+
+
     environment {
         DOCKER_IMAGE = "my-react-app:${env.BUILD_ID}"
     }
